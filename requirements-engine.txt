@@ -1,0 +1,31 @@
+# Voice Atelier — engine (GPU) extras.
+# Install torch/torchaudio FIRST from the cu126 index, then this file, e.g.:
+#   .venv/Scripts/python.exe -m pip install --index-url https://download.pytorch.org/whl/cu126 torch==2.7.1 torchaudio==2.7.1
+#   .venv/Scripts/python.exe -m pip install -r requirements-engine.txt
+#
+# qwen-tts 0.1.1 declares (verified PyPI metadata): transformers==4.57.3,
+# accelerate==1.12.0, gradio, librosa, torchaudio, soundfile, sox, onnxruntime,
+# einops. Its inference modules (qwen_tts/__init__.py -> inference/*) import
+# torch/transformers/librosa/numpy/soundfile only; gradio and sox are never
+# imported by this application (no demo UI is served).
+# gradio/sox are pinned so the declared metadata resolves and `pip check` stays
+# green on this Python 3.11 env; they are dead weight at runtime.
+#
+# gradio 6.16.0 evidence (PyPI metadata): huggingface-hub<2.0,>=0.33.5,
+# pydantic<=3.0,>=2.0, fastapi<1.0,>=0.115.2 -> compatible with the pins in
+# requirements.txt. It pulls starlette>=1.0.1; fastapi 0.162.0 only requires
+# starlette>=0.46.0, so the resolver may install starlette 1.x. If that
+# combination misbehaves at runtime, fall back to:
+#   pip install --no-deps qwen-tts==0.1.1   (and omit gradio)
+# sox 1.5.0 is a pure-Python wrapper (setup.py has no extension modules); the
+# native SoX binary is only required for actual sox.Transformer work.
+torch==2.7.1
+torchaudio==2.7.1
+qwen-tts==0.1.1
+transformers==4.57.3
+accelerate==1.12.0
+gradio==6.16.0
+sox==1.5.0
+librosa==0.11.0
+einops==0.8.2
+onnxruntime==1.31.1

@@ -1,0 +1,14 @@
+[project]
+name = "voice-atelier"
+version = "1.0.0"
+description = "Local RU/EN voice cloning and voice design studio (FastAPI backend)."
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]

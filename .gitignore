@@ -1,0 +1,67 @@
+# Project-local runtime and sensitive user/model data
+/.venv/
+/.tools/
+/.cache/
+/data/
+
+# Python/test/editor caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Secrets and credentials (never publish real values)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*token*.txt
+
+# Generated verification evidence contains host paths and user text/audio
+/verification/artifacts/
+/verification/browser-profile/
+/verification/design-direction-*/
+/verification/pytest.xml
+/verification/requirements-resolved.txt
+/verification/*.tmp
+/verification/*.log
+# One-off diagnostics coupled to private local job IDs, not portable tests
+/verification/design_direction_probe.py
+/verification/design_browser_probe.py
+
+# Recordings, exports, downloaded weights and installers anywhere in the tree
+*.wav
+*.flac
+*.mp3
+*.m4a
+*.ogg
+*.webm
+*.mp4
+*.zip
+*.7z
+*.tar
+*.gz
+*.exe
+*.dll
+*.pyd
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.log
+*.tmp

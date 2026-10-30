@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Voice Atelier">
+  <defs>
+    <linearGradient id="va-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241c16" />
+      <stop offset="1" stop-color="#14100d" />
+    </linearGradient>
+    <linearGradient id="va-bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#d79a55" />
+      <stop offset="1" stop-color="#f2c184" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#va-bg)" />
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="13.25" fill="none" stroke="#e2ab6b" stroke-opacity="0.45" stroke-width="1.5" />
+  <g fill="url(#va-bar)">
+    <rect x="14" y="26" width="5" height="12" rx="2.5" />
+    <rect x="23" y="18" width="5" height="28" rx="2.5" />
+    <rect x="32" y="12" width="5" height="40" rx="2.5" />
+    <rect x="41" y="21" width="5" height="22" rx="2.5" />
+    <rect x="50" y="29" width="5" height="6" rx="2.5" />
+  </g>
+  <path d="M40 47.5h10" stroke="#e2ab6b" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" />
+</svg>

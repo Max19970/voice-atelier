@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="studio-token" content="__STUDIO_TOKEN__" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Voice Atelier</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#view" data-i18n="a11y.skip">Перейти к содержимому</a>
+
+    <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="i-studio" viewBox="0 0 24 24">
+        <path d="M4 7.5h10M4 12h16M4 16.5h7" />
+        <path d="M17.5 5.5v4M20 12v4.5" />
+      </symbol>
+      <symbol id="i-mic" viewBox="0 0 24 24">
+        <rect x="9" y="3" width="6" height="10" rx="3" />
+        <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3M9 21h6" />
+      </symbol>
+      <symbol id="i-wand" viewBox="0 0 24 24">
+        <path d="M5 19 17 7" />
+        <path d="m15 5 4 4M8 4v3M6.5 5.5h3M19 14v3M17.5 15.5h3M4 10v2M3 11h2" />
+      </symbol>
+      <symbol id="i-box" viewBox="0 0 24 24">
+        <path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z" />
+        <path d="M4 7.5 12 12l8-4.5M12 12v9" />
+      </symbol>
+      <symbol id="i-book" viewBox="0 0 24 24">
+        <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5V5.5Z" />
+        <path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5Z" />
+        <path d="M8 7h8M8 10.5h5" />
+      </symbol>
+      <symbol id="i-play" viewBox="0 0 24 24">
+        <path d="M8 5.5v13l11-6.5-11-6.5Z" />
+      </symbol>
+      <symbol id="i-stop" viewBox="0 0 24 24">
+        <rect x="6.5" y="6.5" width="11" height="11" rx="1.5" />
+      </symbol>
+      <symbol id="i-record" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="6.5" />
+        <circle cx="12" cy="12" r="2.5" class="fill" />
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24">
+        <path d="M4 7h16M9 7V4.5h6V7M6.5 7l1 13h9l1-13M10 11v5.5M14 11v5.5" />
+      </symbol>
+      <symbol id="i-up" viewBox="0 0 24 24">
+        <path d="M12 19V6M6.5 11.5 12 6l5.5 5.5" />
+      </symbol>
+      <symbol id="i-down" viewBox="0 0 24 24">
+        <path d="M12 5v13M6.5 12.5 12 18l5.5-5.5" />
+      </symbol>
+      <symbol id="i-download" viewBox="0 0 24 24">
+        <path d="M12 4v10M7.5 10 12 14.5 16.5 10M5 19h14" />
+      </symbol>
+      <symbol id="i-upload" viewBox="0 0 24 24">
+        <path d="M12 16V6M7.5 10 12 5.5 16.5 10M5 19h14" />
+      </symbol>
+      <symbol id="i-x" viewBox="0 0 24 24">
+        <path d="M6 6l12 12M18 6 6 18" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12.5 4.5 4.5L19 7" />
+      </symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24">
+        <path d="M12 4 3 20h18L12 4Z" />
+        <path d="M12 10v4.5M12 17.5v.2" />
+      </symbol>
+      <symbol id="i-info" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8.5" />
+        <path d="M12 11v6M12 7.7v.2" />
+      </symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24">
+        <path d="M20 12a8 8 0 1 1-2.6-5.9" />
+        <path d="M20 4.5V10h-5.5" />
+      </symbol>
+      <symbol id="i-split" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+        <path d="M9 3.5v4M15 10v4M9 16.5v4" />
+      </symbol>
+      <symbol id="i-jobs" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+        <circle cx="7" cy="6" r="1.2" class="fill" />
+        <circle cx="7" cy="12" r="1.2" class="fill" />
+        <circle cx="7" cy="18" r="1.2" class="fill" />
+      </symbol>
+      <symbol id="i-edit" viewBox="0 0 24 24">
+        <path d="M4.5 19.5h4L19 9a2.1 2.1 0 0 0-3-3L5.5 16.5v3Z" />
+        <path d="m14.5 6.5 3 3" />
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24">
+        <path d="m7 14 5-5 5 5" />
+      </symbol>
+    </svg>
+
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">VA</span>
+          <span class="brand-text">
+            <strong>Voice Atelier</strong>
+            <small data-i18n="brand.tagline">локальная студия голоса</small>
+          </span>
+        </div>
+
+        <nav id="tabs" class="tabs" role="tablist" aria-orientation="vertical" aria-label="Разделы студии" data-i18n-title="a11y.tabs">
+          <button type="button" class="tab is-active" id="tab-studio" role="tab" aria-selected="true" aria-controls="view" data-tab="studio">
+            <svg class="icon" aria-hidden="true"><use href="#i-studio"></use></svg>
+            <span data-i18n="nav.studio">Студия</span>
+          </button>
+          <button type="button" class="tab" id="tab-voices" role="tab" aria-selected="false" aria-controls="view" data-tab="voices" tabindex="-1">
+            <svg class="icon" aria-hidden="true"><use href="#i-mic"></use></svg>
+            <span data-i18n="nav.voices">Голоса</span>
+          </button>
+          <button type="button" class="tab" id="tab-design" role="tab" aria-selected="false" aria-controls="view" data-tab="design" tabindex="-1">
+            <svg class="icon" aria-hidden="true"><use href="#i-wand"></use></svg>
+            <span data-i18n="nav.design">Дизайн голоса</span>
+          </button>
+          <button type="button" class="tab" id="tab-models" role="tab" aria-selected="false" aria-controls="view" data-tab="models" tabindex="-1">
+            <svg class="icon" aria-hidden="true"><use href="#i-box"></use></svg>
+            <span data-i18n="nav.models">Модели</span>
+          </button>
+          <button type="button" class="tab" id="tab-guide" role="tab" aria-selected="false" aria-controls="view" data-tab="guide" tabindex="-1">
+            <svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg>
+            <span data-i18n="nav.guide">Справка</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-foot">
+          <div id="status-card" class="status-card" aria-live="polite"></div>
+          <div class="lang-row">
+            <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Switch language">EN</button>
+            <button type="button" class="link-btn" id="refresh-all" data-i18n="common.refresh">Обновить</button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar-text">
+            <h1 class="page-title" id="page-title">Студия</h1>
+            <p class="page-sub" id="page-sub"></p>
+          </div>
+        </header>
+
+        <div id="banners" class="banners" aria-live="polite"></div>
+
+        <section id="view" class="view" role="tabpanel" aria-labelledby="tab-studio" tabindex="-1"></section>
+      </main>
+    </div>
+
+    <aside id="jobs" class="jobs is-open" aria-label="Задания" data-i18n-title="a11y.jobs">
+      <button type="button" class="jobs-head" id="jobs-toggle" aria-expanded="true" aria-controls="jobs-body">
+        <svg class="icon" aria-hidden="true"><use href="#i-jobs"></use></svg>
+        <span class="jobs-title" data-i18n="jobs.title">Задания</span>
+        <span class="jobs-count" id="jobs-count" hidden></span>
+        <svg class="icon jobs-chev" aria-hidden="true"><use href="#i-chevron"></use></svg>
+      </button>
+      <div class="jobs-body" id="jobs-body"></div>
+    </aside>
+
+    <div id="toasts" class="toasts" role="status" aria-live="polite"></div>
+
+    <dialog id="modal" class="modal" aria-labelledby="modal-title"></dialog>
+
+    <noscript>
+      <p class="noscript">Voice Atelier needs JavaScript enabled. / Для работы Voice Atelier нужен JavaScript.</p>
+    </noscript>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

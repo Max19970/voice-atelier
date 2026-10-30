@@ -1,0 +1,15 @@
+# Voice Atelier — base runtime (no engine/GPU).
+# Install into the project .venv. Engine extras live in requirements-engine.txt.
+# Python 3.11 (managed by Setup.ps1).
+fastapi==0.162.0
+uvicorn==0.54.0
+pydantic==2.14.1
+python-multipart==0.0.32
+soundfile==0.14.0
+numpy==2.2.6
+imageio-ffmpeg==0.7.0
+# transformers==4.57.3 (engine) requires huggingface-hub<1.0,>=0.34.0.
+huggingface-hub==0.36.0
+# Test tooling (local-only app; pytest/httpx are tiny and used by tests/).
+pytest==9.2.0
+httpx==0.28.1
